@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-
-require "./lib/vacation_station"
+require "bundler/setup"
+require "vacation_station"
 
 VacationStation::CLI.new.call
