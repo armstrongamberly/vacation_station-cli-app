@@ -19,3 +19,8 @@ provides a brief summary and price of deal
 
 asks the user to circle back around or exit.
 
+a vacation:
+-destination
+-price
+-summary
+
