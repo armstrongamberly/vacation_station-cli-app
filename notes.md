@@ -1,6 +1,6 @@
 CLI
 
-welcome the user and introdues vacation locations to choose from
+welcome the user and introduces vacation locations to choose from
 
 1.
 2.
