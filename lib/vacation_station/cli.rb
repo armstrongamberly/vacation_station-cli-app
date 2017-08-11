@@ -10,7 +10,7 @@ class VacationStation::CLI
 	def list_deals
 		@deals = VacationStation::Deal.today
 		@deals.each.with_index(1) do |deal, i|
-			puts "#{i}. #{deal}"
+			puts "#{i}. #{deal.title} - #{deal.location} - #{deal.price} - #{deal.summary}"
 		end
 	end
 
@@ -24,7 +24,8 @@ class VacationStation::CLI
 			input = gets.strip.downcase
 			
 			if input.to_i > 0
-				puts @deals[input.to_i - 1]
+				the_deal = @deals[input.to_i - 1]
+				puts "#{the_deal.title} - #{the_deal.location} - #{the_deal.price} - #{the_deal.summary}"
 			elsif input == "list"
 				list_deals
 			else
