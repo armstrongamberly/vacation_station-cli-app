@@ -3,6 +3,12 @@ class VacationStation::Deal
 
 	def self.today
 		# scrape travelzoo top 20 and return details based on that data
+		self.scrape_deals
+		
+	end
+
+	def self.scrape_deals
+
 		deal_1 = self.new
 		deal_1.location = "San Jose, Arenal Volcano & Monteverde Cloud Forest"
 		deal_1.title = "title"
