@@ -23,7 +23,7 @@ class VacationStation::CLI
 		input = nil
 		while input != "exit"
 			puts <<-DOC.gsub /^\s+/, ""
-			Enter the number of a destination to learn more! type 'exit' to get outta here and go explore
+			Enter the number of a destination to learn more! type 'exit' to get outta here and go explore or type 'list' to view your options again.
 			DOC
 			input = gets.strip.downcase
 			
