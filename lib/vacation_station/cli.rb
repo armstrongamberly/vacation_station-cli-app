@@ -3,26 +3,11 @@ class VacationStation::CLI
 	
 	def call
 		puts ">>>>>>>>>> 2017 Best in Budget Destinations <<<<<<<<<<"
-		VacationStation::Scraper.scrape_options.each do |index|
+		VacationStation::Scraper.scrape_options.each do |index| # make a method
 			puts "#{index}"
 		end
-		# list_options
 		menu
 	end
-
-# 	def list_options
-# 		puts ""
-
-# 		puts "Enter the number of a destination to learn more!"
-# 		input = gets.strip
-# 		choice = VacationStation::Destinations.find(input.to_i)
-# 		print_choice(choice)
-
-# 		puts ""
-# 		puts "Would you like to explore another destination? (y/n)"
-# 		input = gets.strip.downcase
-
-# end
 
 
 	def menu
@@ -34,12 +19,16 @@ class VacationStation::CLI
 			input = gets.strip.downcase
 			
 			if input.to_i > 0
-				summary
+				puts ""
+				puts VacationStation::Scraper.scrape_summary[input.to_i-1] #make a method
+				puts ""
 				
 			elsif input == "list"
-				list_options
+				VacationStation::Scraper.scrape_options.each do |index| #make a method
+					puts "#{index}"
+				end
 			else
-				puts "I don't see that option here..."
+				puts "I don't see that option here..." #fix this so that it doesn't come after 'exit'
 			end
 		end
 	end

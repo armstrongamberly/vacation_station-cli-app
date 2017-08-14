@@ -51,7 +51,7 @@ class VacationStation::Scraper
  		summaries << about
       end
     	summaries
-    	binding.pry
+    	# binding.pry
     end
 end
 
