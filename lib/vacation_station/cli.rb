@@ -27,7 +27,7 @@ class VacationStation::CLI
 			DOC
 			input = gets.strip.downcase
 			
-			if input.to_i > 0
+			if input.to_i > 0 && input.to_i < 10
 				puts ""
 				puts VacationStation::Scraper.scrape_summary[input.to_i-1]
 				puts ""
@@ -37,7 +37,8 @@ class VacationStation::CLI
 			elsif input == "exit"
 				goodbye
 			else
-				puts "I don't see that option here... type 'list' to review your options" 
+				puts "I don't see that option here...please choose from the list below"
+				list 
 			end
 		end
 	end
