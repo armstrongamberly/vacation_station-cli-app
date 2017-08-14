@@ -27,7 +27,7 @@ class VacationStation::CLI
 			DOC
 			input = gets.strip.downcase
 			
-			if input.to_i > 0 && input.to_i < 10
+			if input.to_i > 0 && input.to_i < 11
 				puts ""
 				puts VacationStation::Scraper.scrape_summary[input.to_i-1]
 				puts ""
