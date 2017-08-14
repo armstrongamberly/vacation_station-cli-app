@@ -1,8 +1,6 @@
 # VacationStation
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/vacation_station`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to VacationStation! You need a vacation but you ball on a budget. As a member of the hundredaires club sometimes the wallet dictates where we go, not our instagram feed. This gem provides a list of destinations that will give you the most bang for your buck. Choose from the list to read more about the destination.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This gem provides a list of destinations that will give you the most bang for your buck. Choose from the list to read more about the destination.
 
 ## Development
 
