@@ -2,11 +2,20 @@
 class VacationStation::CLI
 	
 	def call
-		puts ">>>>>>>>>> 2017 Best in Budget Destinations <<<<<<<<<<"
-		VacationStation::Scraper.scrape_options.each do |index| # make a method
-			puts "#{index}"
-		end
+		puts ""
+		puts "          >>>>>>>>>> 2017 Best in Budget Destinations <<<<<<<<<<"
+		puts ""
+		list
 		menu
+	end
+
+	def list
+		VacationStation::Scraper.scrape_options.each do |index|
+			puts <<-DOC
+			#{index}
+			
+			DOC
+		end
 	end
 
 
@@ -24,9 +33,9 @@ class VacationStation::CLI
 				puts ""
 				
 			elsif input == "list"
-				VacationStation::Scraper.scrape_options.each do |index| #make a method
-					puts "#{index}"
-				end
+				list
+			elsif input == "exit"
+				goodbye
 			else
 				puts "I don't see that option here..." #fix this so that it doesn't come after 'exit'
 			end
@@ -34,7 +43,8 @@ class VacationStation::CLI
 	end
 
 	def goodbye
-		puts "Thanks for checking out today's travel deals! Check back tomorrow for new deals!"
+		puts "          Thanks for checking out today's travel deals! Check back tomorrow for new deals!"
+
 	end
 end
 
