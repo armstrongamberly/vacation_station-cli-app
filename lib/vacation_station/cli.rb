@@ -13,7 +13,7 @@ class VacationStation::CLI
 		VacationStation::Scraper.scrape_options.each do |index|
 			puts <<-DOC
 			#{index}
-			
+
 			DOC
 		end
 	end
@@ -29,7 +29,7 @@ class VacationStation::CLI
 			
 			if input.to_i > 0
 				puts ""
-				puts VacationStation::Scraper.scrape_summary[input.to_i-1] #make a method
+				puts VacationStation::Scraper.scrape_summary[input.to_i-1]
 				puts ""
 				
 			elsif input == "list"
@@ -37,7 +37,7 @@ class VacationStation::CLI
 			elsif input == "exit"
 				goodbye
 			else
-				puts "I don't see that option here..." #fix this so that it doesn't come after 'exit'
+				puts "I don't see that option here... type 'list' to review your options" 
 			end
 		end
 	end
@@ -47,4 +47,3 @@ class VacationStation::CLI
 
 	end
 end
-
