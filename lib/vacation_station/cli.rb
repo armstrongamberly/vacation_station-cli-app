@@ -5,16 +5,14 @@ class VacationStation::CLI
 		puts ""
 		puts "          >>>>>>>>>> 2017 Best in Budget Destinations <<<<<<<<<<"
 		puts ""
+		VacationStation::Scraper.scrape_options
 		list
 		menu
 	end
 
 	def list
-		VacationStation::Scraper.scrape_options.each do |index|
-			puts <<-DOC
-			#{index}
-
-			DOC
+		VacationStation::Location.all.each do |location|
+			puts "#{location.name}"
 		end
 	end
 
@@ -28,8 +26,9 @@ class VacationStation::CLI
 			input = gets.strip.downcase
 			
 			if input.to_i > 0 && input.to_i < 11
+				index = input.to_i-1
 				puts ""
-				puts VacationStation::Scraper.scrape_summary[input.to_i-1]
+				puts VacationStation::Location.all[index].about
 				puts ""
 				
 			elsif input == "list"

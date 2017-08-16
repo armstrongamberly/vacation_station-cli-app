@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
+
 require "bundler/setup"
-require "vacation_station"
+require_relative "../lib/vacation_station"
 
 VacationStation::CLI.new.call
