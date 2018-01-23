@@ -4,19 +4,12 @@ Welcome to VacationStation! You need a vacation but you ball on a budget. As a m
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Fork and clone this repo.
 
-```ruby
-gem 'vacation_station'
-```
+run bundle exec bin/vacation_station
 
-And then execute:
+choose from the options available to you
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install vacation_station
 
 ## Usage
 
